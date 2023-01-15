@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+<div class="card rounded-5 mx-auto rounded shadow-lg p-3 mb-5 bg-white " style="width: 45rem;">
+    <div class="card-body">
+    <form action="/lawyerRegister" method="post" enctype=multipart/form-data>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <div>
+
+                <input type=file name=file>
+
+
+        </div>
+        <div style = "margin-bottom:10px">
+        <textarea id="description" name="description" rows="4" cols="50" placeholder="Description"></textarea>
+        </div>
+        <div style=" float:left;">
+            <select class="form-select  font " name="speciality">
+              <option disabled="" selected="">Speciality</option>
+              {%for speciality in specialities %}
+                  <option >{{speciality}}</option>
+              {% endfor %}
+            </select>
+        </div>
+        <div style=" float:left;  margin-left: 20px;">
+            <select class="form-select   font" name="city" >
+              <option disabled="" selected="" >City</option>
+              {%for city in cities %}
+                  <option >{{city}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div style=" float:left;  margin-left: 20px;">
+            <select class="form-select   font" name="gender" >
+              <option disabled="" selected="" >Gender</option>
+                  <option > Male</option>
+                  <option > Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="fee" name="fee" placeholder="Fee" type="text">
+        </div>
+        <div>
+        <button class="btn font" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+sort1 uses: bubble sort
+
+How do you know?:
+random 50000:11.276sec greates time
+reversed 50000: 9.713 greates time
+sorted 50000: 6 sec medium time
+it was the slowest so it is bubble sort and it took similar time in random and reversed while sorted was faster
+
+sort2 uses: merge sort
+
+How do you know?:
+random 50000: 2.958 fastest
+reversed 50000: 2.650 fastest
+sorted 50000: 3.3 fastes
+it was the fastest so it was merge
+
+sort3 uses: selection sort
+
+How do you know?:
+random 50000: 8.496 medium
+reversed 50000: 7.26 medium
+sorted 50000: 7.67 slowest
+it was medium

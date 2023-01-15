@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">symbol</th>
+            <th scope="col">name</th>
+            <th scope="col">shares</th>
+            <th scope="col">price</th>
+            <th scope="col">total</th>
+        </tr>
+        </thead>
+        <tbody>
+        {%for row in rows %}
+        <tr>
+            <td>{{row["symbol"]}}</td>
+            <td>{{ lookup(row["symbol"])["name"] }}</td>
+            <td>{{row["shares"]}}</td>
+            <td>{{(lookup(row["symbol"])["price"]) | abs | usd}}</td>
+            <td>{{(lookup(row["symbol"])["price"] * row["shares"]) | abs | usd}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Cash</td>
+            <td>9,888.00</td>
+            <td>{{cash | usd}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+            <td>9,944.00</td>
+            <td>{{10000 | usd}}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

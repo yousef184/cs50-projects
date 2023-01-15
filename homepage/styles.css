@@ -1,0 +1,25 @@
+.spaceQ
+{
+   margin-right: 1rem;
+   margin-top: 3rem;
+   text-align: end;
+}
+.B1 {
+    margin-top: 0.5rem;
+    margin-right: 50px;
+    align :end;
+ }
+ .B2 {
+    margin-left: 50px;
+ }
+ .introduction {
+   font-family: "Lucida Console", "Courier New", monospace;
+   font-size: 3rem;
+   text-align: center;
+ }
+ .Result
+ {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 10rem;
+ }

@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="card rounded-5 mx-auto rounded shadow-lg p-3 mb-5 bg-white " style="width: 50rem; ">
+    <div class="card-body">
+
+        <form action="/search" method="post">
+          <div style=" float:left; ">
+            <select class="form-select   font" name="symbol" >
+              <option disabled="" selected="" >City</option>
+              {%for city in cities %}
+                  <option >{{city}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div style=" float:left;  margin-left: 20px;">
+              <select class="form-select   font " name="symbol">
+                <option disabled="" selected="">Speciality</option>
+                {%for speciality in specialities %}
+                    <option >{{speciality}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div style=" float:left; margin-top: 10px; margin-left: 20px;" >
+              <input  autocomplete="off" class = "rounded-3" id="name" name="name" placeholder="Lawyer Name" type="text">
+            </div>
+            <div style="float:left; margin-left: 20px;" >
+              <button class= "btn " type="submit">Search</button>
+            </div>
+
+
+            </form>
+          </div>
+    </div>
+
+  <div class="card rounded-5 ml-auto rounded shadow-lg p-3 mb-5 bg-white " style="width: 13rem; height: auto; float:left; margin-left: 13rem;">
+      <h5 class="card-title " >Filters</h5>
+      <div class="card-body">
+        <button type="button" class="collapsible ">Gender</button>
+        <div class="content ml-auto">
+          <div class="form-check ml-auto">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Male
+            </label>
+          </div>
+          <div class="form-check ml-auto">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Female
+            </label>
+          </div>
+        </div>
+        <button type="button" class="collapsible">Fee</button>
+        <div class="content">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              ANY
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              less than 50
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              from 50 to 100
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              from 100 to 200
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              from 200 to 300
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              greater than 300
+            </label>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  <div class="card rounded-5 ml-auto rounded shadow-lg p-3 mb-5 bg-white " style="width: 80rem; height: auto; float:left; margin-left: 10rem;">
+    <div class="card-body">
+    </div>
+  </div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+{% endblock %}NUMERIC NOT NULL

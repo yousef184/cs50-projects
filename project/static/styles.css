@@ -1,0 +1,98 @@
+.bg-color
+      {
+          height: 100vh;
+          width: 100%;
+          background: radial-gradient(905px at 4.9% 85.8%, rgb(255, 243, 242) 0.1%, rgb(255, 247, 220) 57.6%);
+      }
+.navbar-brand
+{
+    font-size: xx-large;
+
+}
+.card-title
+{
+  font-family: 'Brush Script MT', cursive !important;
+  font-size: 30px !important;
+  text-decoration: solid underline !important;
+}
+.dropdown-toggle
+{
+  font-family: 'Brush Script MT', cursive !important;
+  color: white !important;
+  font-size: 25px !important;
+  background-color: #8B6C5C !important;
+}
+.form-select
+{
+  font-family: 'Brush Script MT', cursive !important;
+  color: white !important;
+  font-size: 25px !important;
+  background-color: #8B6C5C !important;
+  width: 200px !important;
+}
+.btn
+{
+  font-family: 'Brush Script MT', cursive !important;
+  color: white !important;
+  font-size: 25px !important;
+  background-color: #8B6C5C !important;
+}
+.nav-item
+{
+  font-family: 'Brush Script MT', cursive !important;
+  color: white !important;
+  font-size: 40px;
+  margin: 0px;
+}
+.logo-image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+    transition: transform 0.3s;
+}
+.logo-image:hover{
+  transform: rotate(-15deg);
+}
+.collapsible {
+  background-color: grey !important;
+  background-color: #8B6C5C !important;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 7rem !important;
+  float:left !important;
+  font-size: 20px !important;
+  font-family: 'Brush Script MT', cursive !important;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  background-color: white;
+  width: 9rem !important;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white !important;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+.form-check-label{
+  font-size: 10px;
+  text-align: left !important;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <script>
+          var counter =0;
+          var counter2 = 0 ;
+          var counter3 = 0 ;
+          function alertname(event)
+          {
+
+            if (counter < 3)
+            {
+              const cairo = document.getElementById(event.srcElement.id);
+              var a = event.srcElement.innerText;
+              var ans = a.localeCompare("مبيكرهش حد");
+              var ans2 = a.localeCompare("رئيس");
+              var ans3 = a.localeCompare("ودانه");
+              if (ans == 0 ||ans2 == 0||ans3 == 0 )
+              {
+                  cairo.style.backgroundColor = 'green';
+                  cairo.style.color = 'white';
+                  document.getElementById('theDiv2').innerHTML = "Correct!";
+                  counter2++;
+              }
+              else
+              {
+                  cairo.style.backgroundColor = 'red';
+                  cairo.style.color = 'black';
+                  document.getElementById('theDiv2').innerHTML = "Incorrect";
+
+              }
+              counter++;
+          }
+          if(counter2 > 2)
+          {
+            document.getElementById('result').innerHTML = "هو كمان بيحبك";
+          }
+      }
+      </script>
+    </head>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #ffA701;">
+        <div class="container-fluid">
+          <a class="navbar-brand" class="font-weight-bold" href="#">VOLTYQ</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link"  href="#" style="color:white;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8080/homepage/yousefelsayed.html">About me</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  بتحب السيسي؟
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" style="background-color: #ffA701;"href="http://127.0.0.1:8080/homepage/loveCC.html">بحب السيسي</a></li>
+                  <li><a class="dropdown-item"  href="http://127.0.0.1:8080/homepage/loveCC+.html">بحب السيسي اوي</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <body>
+      <div class="text-center">
+        <img src="3rs.jpg" class="rounded">
+      </div>
+      <p><div id="theDiv2" ></div></p>
+      <p class = "spaceQ" >
+        اكتر طبقة بيكرها؟-
+      </p>
+      <button id = "cairo" class = 'B1' onclick ="alertname(event)"> المدني </button>
+      <button id = "alexandria" class = 'B1' onclick ="alertname(event)"> العسكر </button>
+      <button id = "sharm el-sheikh" class = 'B1' onclick ="alertname(event)"> مبيكرهش حد </button>
+      <p class = "spaceQ" >
+        فاكر نفسه ايه؟-
+      </p>
+      <button id = "cairo1" class = 'B1' onclick ="alertname(event)"> رئيس </button>
+      <button id = "alexandria1" class = 'B1' onclick ="alertname(event)"> نبي </button>
+      <button id = "sharm el-sheikh1" class = 'B1' onclick ="alertname(event)"> طبيب الفلاسفة </button>
+      <p class = "spaceQ" >
+        كانو بيحطوله الأستيكه فين؟-
+      </p>
+      <button id = "cairo2" class = 'B1' onclick ="alertname(event)"> استيكه </button>
+      <button id = "alexandria2" class = 'B1' onclick ="alertname(event)"> كتاب </button>
+      <button id = "sharm el-sheikh2" class = 'B1' onclick ="alertname(event)"> ودانه </button>
+      <p><div id="result" class = 'Result'></div></p>
+    </body>
+</html>
