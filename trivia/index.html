@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <style>
+            .B1 {
+               margin-right: 50px;
+            }
+            .B2 {
+               margin-left: 50px;
+            }
+
+        </style>
+        <script>
+            var counter =0;
+            var counter2 =0;
+            function alertname(event)
+            {
+                if (counter == 0)
+                {
+                const cairo = document.getElementById(event.srcElement.id);
+                var a = event.srcElement.innerText;
+                var ans = a.localeCompare("cairo");
+                if (ans == 0)
+                {
+                    cairo.style.backgroundColor = 'green';
+                    cairo.style.color = 'white';
+                    document.getElementById('theDiv').innerHTML = "Correct!";
+
+                }
+                else
+                {
+                    cairo.style.backgroundColor = 'red';
+                    cairo.style.color = 'black';
+                    document.getElementById('theDiv').innerHTML = "Incorrect";
+
+                }
+                counter =1;
+
+            }
+        }
+        function alertname2(event)
+        {
+            if (counter2 == 0)
+            {
+            const input = document.getElementById('inp');
+            var x = document.getElementById("inp").value;
+            var ans = x.localeCompare("king");
+            if(ans == 0)
+            {
+                input.style.backgroundColor = 'green';
+                input.style.color = 'white';
+                document.getElementById('theDiv2').innerHTML = "Correct!";
+            }
+            else
+            {
+                input.style.backgroundColor = 'red';
+                input.style.color = 'black';
+                document.getElementById('theDiv2').innerHTML = "Incorrect";
+            }
+            counter2 = 1;
+            input.disabled = true;
+            }
+
+        }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <h3>What is the capital of egypt</h3>
+                <hr>
+                <p><div id="theDiv"></div></p>
+                <button id = "cairo" class = 'B1' onclick ="alertname(event)"> cairo </button>
+                <button id = "alexandria" class = 'B1' onclick ="alertname(event)"> alexandria </button>
+                <button id = "sharm el-sheikh" class = 'B1' onclick ="alertname(event)"> sharm el-sheikh </button>
+                <button id = "hurgadah" onclick ="alertname(event)"> hurgadah </button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <h3>yousef elsayed?</h3>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <p><div id="theDiv2"></div></p>
+                <input id="inp" name = 'a' type="'text">
+                <button id = "confirm" class = 'B2' onclick ="alertname2(event)"> confirm </button>
+            </div>
+        </div>
+    </body>
+</html>
+
